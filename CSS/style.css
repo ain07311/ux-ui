@@ -25,6 +25,7 @@ body{font-family: 'Spoqa Han Sans';
 }
 .logo a{
     display: block;
+    padding: 20px;
 }
 
 .logo img{
@@ -32,31 +33,63 @@ body{font-family: 'Spoqa Han Sans';
     height: auto;
 }
 /* 로그인 폼 */
+.login-form :focus{
+    outline: 0;
+}
 .login-form fieldset{
     border:0;
     margin:0;
     padding:0;
-    background: pink;
     width: 460px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-flow: row wrap;
     }
+.container{
+    display: flex;
+    flex-flow: row wrap;
+}
 .user-email,
 .user-password,
 .ip-state-wrapper,
 .btn-login{
     width: 100%;
 }
-.ip-state-wrapper{
-    order: 1;
+.user-email,
+.user-password{
+    background: #fff;
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    height: 48px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.user-email:focus-within,
+.user-password:focus-within{
+    border-color: #03cf5d;
 }
 [name="userEmail"],
 [name="userPassword"]
 {
     box-sizing: border-box;
     width: 100%;
+    border: 0;
+    padding: 5px 10px 5px 20px;
+}
+.ip-state-wrapper{
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.btn-login{
+    margin-top: 10px;
+    background-color: #03cf5d;
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    padding: 16px 0;
+
 }
